@@ -6,6 +6,15 @@ const unshiftBtn = document.getElementById('unshift-btn');
 const popBtn = document.getElementById('pop-btn');
 const shiftBtn = document.getElementById('shift-btn');
 
+function render(arr) {
+    emojiContainer.innerHTML = '';
+    arr.forEach(emoji => {
+        const emojiSpan = document.createElement('span');
+        emojiSpan.textContent = emoji;
+        emojiContainer.appendChild(emojiSpan);
+    });
+}
+
 function modifyEmojiArray(type, arr) {
     if (type === "push" && emojiInput.value) {
         arr.push(emojiInput.value);
