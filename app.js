@@ -29,3 +29,19 @@ function modifyEmojiArray(type, arr) {
     emojiInput.value = '';
     render(arr);
 }
+
+pushBtn.addEventListener('click', () => {   
+    modifyEmojiArray("push", myEmojis);
+});
+
+unshiftBtn.addEventListener('click', () => {
+    modifyEmojiArray("unshift", myEmojis);
+});
+
+popBtn.addEventListener('click', () => {
+    modifyEmojiArray("pop", myEmojis);
+});
+
+shiftBtn.addEventListener('click', () => {
+    modifyEmojiArray("shift", myEmojis);
+});
